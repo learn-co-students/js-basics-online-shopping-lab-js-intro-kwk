@@ -45,8 +45,8 @@ describe('#viewCart', function() {
     const iPhoneCost = getCart()[2]["iPhone"];
 
     var output = viewCart();
-	var expected = `In your cart, you have socks at $${socksCost}, puppy at $${puppyCost}, iPhone at $${iPhoneCost}.`
-	expect(output).toEqual(expected);
+    var expected = `In your cart, you have socks at $${socksCost}, puppy at $${puppyCost}, iPhone at $${iPhoneCost}.`
+    expect(output).toEqual(expected);
     expect(console.log).toHaveBeenCalledWith(expected);
   });
 
