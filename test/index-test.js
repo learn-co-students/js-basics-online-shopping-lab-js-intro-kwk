@@ -44,11 +44,10 @@ describe('#viewCart', function() {
     const puppyCost = getCart()[1]["puppy"];
     const iPhoneCost = getCart()[2]["iPhone"];
 
-    viewCart();
-
-    expect(console.log).toHaveBeenCalledWith(
-      `In your cart, you have socks at $${socksCost}, puppy at $${puppyCost}, iPhone at $${iPhoneCost}.`
-    )
+    var output = viewCart();
+    var expected = `In your cart, you have socks at $${socksCost}, puppy at $${puppyCost}, iPhone at $${iPhoneCost}.`
+    expect(output).toEqual(expected);
+    expect(console.log).toHaveBeenCalledWith(expected);
   });
 
   it("should print 'Your shopping cart is empty.' if the cart is empty", function() {
